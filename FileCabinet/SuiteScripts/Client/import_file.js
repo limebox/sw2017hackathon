@@ -1,19 +1,10 @@
-var myDropzone = new Dropzone("#main_form", { url: "#"});
+var myDropzone = new Dropzone("#ns-upload", { url: "https://system.na1.netsuite.com/app/site/hosting/scriptlet.nl?script=63&deploy=1"});
+var myFile;
+document.getElementById('ns-upload').className += " dropzone";
+console.log( myDropzone );
+	  myDropzone.on("success", function(uploadFile, xhr, formData) {
+		  myFile = uploadFile;
+		  console.log(xhr);
+		  console.log(formData);
 
-Dropzone.options.myDropzone = {
-  init: function() {
-    this.on("addedfile", function(file) {
-    	require(['/SuiteScripts/Models/Init', 'N/file'], function( model, uploadFile ){
-    		/*var fileObj = file.create({
-    		    name: uploadFile.name,
-    		    fileType: uploadFile.type,
-    		    contents: uploadFile.contents,
-    		    description: 'This is a plain text file.',
-    		    encoding: file.Encoding.UTF8,
-    		    folder: 30,
-    		    isOnline: true
-    		});*/
-    	});
     });
-  }
-};
