@@ -2,18 +2,22 @@
  * Vendor.js
  * @NApiVersion 2.x
  */
+
 define([
+	'./ModelDefinitions',
 	'./Create/Init',
 	'./Read/Init',
 	'./Update/Init',
-	'./Delete/Init',
+	'./Delete/Init'
 ],
 
-function( create, read ) {
-	
+function( def, create, read, update, del ) {
+
 	return {
 		create:  create,
-		read:    read
+		read:    read,
+		update:  update,
+		del:     del
 	};
 	
 });
