@@ -4,11 +4,11 @@
  */
 
 define([
-	'./ModelDefinitions',
-	'./Create/Init',
-	'./Read/Init',
-	'./Update/Init',
-	'./Delete/Init'
+//	'./ModelDefinitions',
+//	'./Create/Init',
+//	'./Read/Init',
+//	'./Update/Init',
+//	'./Delete/Init'
 ],
 
 function( def, create, read, update, del ) {
