@@ -6,7 +6,7 @@ require(['N/search'], function(search) {
 	console.log('search: ' + paymentsByMonthSearch);
 	console.log('length: ' + paymentsByMonthSearch.columns.length)
 	var resultsArray = getDataOnly(paymentsByMonthSearch);
-	log.debug(resultsArray);
+	console.log(resultsArray[0][1]);
 	
 //	paymentsByMonthSearch.each(function(result) {
 //		//var serviceDate = result.getValue(paymentsByMonthSearch.columns[1]);
