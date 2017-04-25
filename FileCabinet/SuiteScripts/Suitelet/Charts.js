@@ -18,13 +18,9 @@ function(models, file, ui) {
     		id: 'SuiteScripts/Assets/styles/chartist.min.js'
     	}).url;
     	
-    	var chartistJSMap = file.load({
-    		id: 'SuiteScripts/Assets/styles/chartist.min.js.map'
-    	}).url;
-    	
     	var chartCreator = file.load({
     		id: 'SuiteScripts/Client/create_chart.js'
-    	});
+    	}).url;
     	
     	var html = file.load({
     	    id: 'SuiteScripts/Assets/templates/charts.html'
@@ -33,8 +29,8 @@ function(models, file, ui) {
     	var styles = '<link rel="stylesheet" type="text/css" href="' + chartistCSS + '">';
     	
     	html = styles + html;
-    	html += '<script src="' + chartistJS + '"></script>"' 
-    		+ '<script src="' + chartistJSMap + '"></script>"';
+    	html += '<script src="' + chartistJS + '"></script>'
+    		+ '<script src="' + chartCreator + '"></script>';
     	
     	form = ui.createForm({
     		title: 'Charts'

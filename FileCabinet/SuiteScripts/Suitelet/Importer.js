@@ -2,9 +2,9 @@
  * @NApiVersion 2.x
  * @NScriptType Suitelet
  */
-define(['/SuiteScripts/Models/Init', 'N/file','N/ui/serverWidget'],
+define(['/SuiteScripts/styles/chartist', 'N/file','N/ui/serverWidget'],
 
-function(models, file, ui) {
+function(chartist, file, ui) {
 
     function onRequest(context) {
     	
